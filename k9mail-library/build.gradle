@@ -14,17 +14,35 @@ repositories {
 }
 
 dependencies {
+    // 解析邮件 MIME 的Java类库
     compile 'org.apache.james:apache-mime4j-core:0.7.2'
     compile 'org.apache.james:apache-mime4j-dom:0.7.2'
+
     compile 'commons-io:commons-io:2.4'
+
+    // 压缩工具
     compile 'com.jcraft:jzlib:1.0.7'
+
+    // This library provides UTF-7 and Modified UTF-7 Charsets for Java.
+    // Sun's default Java distribution lacks support for the UTF-7 character set.
+    // Though it is not used commonly, it is still sometimes encountered in e-mails,
+    // or applications handling e-mail. The package is written as java.nio.charset extension,
+    // which means it can be used without special installation or configuration.
+    // Just drop the jar in your classpath, and you are ready to go.
+    // More details see http://jutf7.sourceforge.net/
     compile 'com.beetstra.jutf7:jutf7:1.0.0'
+
     compile "com.android.support:support-annotations:${androidSupportLibraryVersion}"
 
+    // 单元测试相关
     androidTestCompile 'com.android.support.test:runner:0.4.1'
+
+    // 轻量级密码术包 https://github.com/rtyley/spongycastle
     androidTestCompile 'com.madgag.spongycastle:pg:1.51.0.0'
 
     testCompile "com.squareup.okio:okio:${okioVersion}"
+
+    // 单元测试相关
     testCompile "org.robolectric:robolectric:${robolectricVersion}"
     testCompile "junit:junit:${junitVersion}"
     testCompile "org.mockito:mockito-core:${mockitoVersion}"
