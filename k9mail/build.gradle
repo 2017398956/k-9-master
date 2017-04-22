@@ -37,11 +37,11 @@ dependencies {
     // https://github.com/cketti/SafeContentResolver
     compile 'de.cketti.safecontentresolver:safe-content-resolver-v14:0.9.0'
     // 水纹效果 https://github.com/amlcurran/ShowcaseView
-    compile 'com.github.amlcurran.showcaseview:library:5.4.1'
+    compile 'com.github.amlcurran.showcaseview:library:5.4.3'
     // Moshi is a modern JSON library for Android and Java. It makes it easy to parse JSON into Java objects:
-    compile 'com.squareup.moshi:moshi:1.2.0'
+    compile 'com.squareup.moshi:moshi:1.4.0'
 
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
 
     testCompile "org.robolectric:robolectric:${robolectricVersion}"
     testCompile "junit:junit:${junitVersion}"
